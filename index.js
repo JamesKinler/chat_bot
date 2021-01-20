@@ -27,6 +27,7 @@ app.post('/chat-bot', (request, response) => {
 
 app.listen(port, () => {
   console.log(`listing on port ${port}`)
+  console.log('thongs')
 })
 
 const chatBot = (request, response) => {
