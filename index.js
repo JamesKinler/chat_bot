@@ -19,7 +19,7 @@ const chatBot = (request, response) => {
   const agent = new WebhookClient({request, response})
 
   function sayHello(agent){
-    agent.add('Hello I am nancy and i love chili dogs')
+    agent.add('Hello my name is Austin how can i help you?')
   }
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
