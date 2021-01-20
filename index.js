@@ -32,16 +32,16 @@ app.listen(port, () => {
 const chatBot = (request, response) => {
   const agent = new WebhookClient({request, response})
 
-  // function sayHello(agent){
-  //   agent.add('Hello my name is Austin how can i help you?')
-  // }
+  function sayHello(agent){
+    agent.add('Hello my name is Austin how can i help you?')
+  }
 
   function giveQuote(agent){
     agent.add("No Matter what people tell you, words and ideas can change the world")
   }
 
   let intentMap = new Map();
-  // intentMap.set("Default Welcome Intent", sayHello)
+  intentMap.set("Default Welcome Intent", sayHello)
   intentMap.set("Need Quote", giveQuote)
   agent.handleRequest(intentMap)
 }
