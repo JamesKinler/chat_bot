@@ -37,14 +37,15 @@
   }
 
   function giveQuote(agent){
-    const QUOTE_TYPE_ENTITY = 'TypeOfQuote'
-    const quote_type = agent.parameters[QUOTE_TYPE_ENTITY].toLowerCase();
+    const quote_type = agent.parameters['TypeOfQuote'].toLowerCase();
     console.log(quote_type);
     if(quote_type == "inspiration"){
       agent.add("I love women in thongs and that is that")
+    }else{
+        agent.add("No Matter what people tell you, words and ideas can change the world")
     }
-    // console.log(agent.parameters("TypeOfQuote"));
-    agent.add("No Matter what people tell you, words and ideas can change the world")
+
+
   }
 
   let intentMap = new Map();
