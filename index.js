@@ -37,7 +37,7 @@
   function giveQuote(agent){
     const quote_type = agent.parameters('TypeOfQuote').toLowerCase();
     if(quote_type == "inspirational"){
-      agent.add('I like women in thongs and that is that');
+      agent.add('I like women in thongs and that is that')
     }
     agent.add("No Matter what people tell you, words and ideas can change the world")
 
