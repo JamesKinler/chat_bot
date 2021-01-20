@@ -37,7 +37,7 @@
   }
 
   function giveQuote(agent){
-    const quote_type = agent.parameters('TypeOfQuote').toLowerCase();
+    const quote_type = conv.parameters('TypeOfQuote').toLowerCase();
     if(quote_type == "inspirational"){
       agent.add("I love women in thongs and that is that")
     }
