@@ -6,7 +6,7 @@ const app = express()
 app.use(bodyParser.json())
 const port = process.env.PORT || 3000
 
-const TYPE_OF_Quote = 'TypeOfQuote'
+// const TYPE_OF_Quote = 'TypeOfQuote'
 
 
 // Weather Code
@@ -27,7 +27,6 @@ app.post('/chat-bot', (request, response) => {
 
 app.listen(port, () => {
   console.log(`listing on port ${port}`)
-  console.log('thongs')
 })
 
 const chatBot = (request, response) => {
@@ -43,6 +42,6 @@ const chatBot = (request, response) => {
 
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
-  intentMap.set(TYPE_OF_Quote, giveQuote)
+  intentMap.set("TypeOfQuote", giveQuote)
   agent.handleRequest(intentMap)
 }
