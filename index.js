@@ -36,13 +36,13 @@
     agent.add("Hello my name is Austin how can i help you?")
   }
 
-  function giveQuote(conv){
-    const QUOTE_TYPE_ENTITY = "TypeOfQuote"
-    const quote_type = conv.parameters(QUOTE_TYPE_ENTITY).toLowerCase();
-    if(quote_type == "inspirational"){
-      agent.add("I love women in thongs and that is that")
-    }
-    // agent.add("No Matter what people tell you, words and ideas can change the world")
+  function giveQuote(agent){
+    // const quote_type = agent.parameters('TypeOfQuote').toLowerCase();
+    // if(quote_type == "inspirational"){
+    //   agent.add("I love women in thongs and that is that")
+    // }
+    console.log(agent);
+    agent.add("No Matter what people tell you, words and ideas can change the world")
   }
 
   let intentMap = new Map();
