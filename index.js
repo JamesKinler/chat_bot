@@ -36,7 +36,6 @@
 
   function giveQuote(agent){
     agent.add("No Matter what people tell you, words and ideas can change the world")
-
   }
 
   let intentMap = new Map();
