@@ -42,6 +42,6 @@ const chatBot = (request, response) => {
 
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
-  intentMap.set("TypeOfQuote", giveQuote)
+  intentMap.set("Need Quote", giveQuote)
   agent.handleRequest(intentMap)
 }
