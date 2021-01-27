@@ -37,7 +37,7 @@
     }
   }
 
-  function weatherMap(agent){
+  function weatherMap(agent, data){
     // Weather Code
     const request = require('request');
     const weather_city = agent.parameters['geo-city-us'].toLowerCase();
