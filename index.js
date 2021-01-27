@@ -6,20 +6,21 @@
   app.use(bodyParser.json())
   const port = process.env.PORT || 3000
 
-// const TYPE_OF_Quote = 'TypeOfQuote'
+
+  // Weather Code
+  const request = require('request');
+  const weather_city = agent.parameters['geo-city-us'].toLowerCase();
+  const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
+
+  const city = 'Fresno';
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
+
+  request(url, (error, response, body) => {
+    const data = JSON.parse(body);
+    console.log(`It's currently ${data.main.temp}`);
+  })
 
 
-// Weather Code
-// const request = require('request');
-// const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
-//
-// const city = 'Fresno';
-// const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
-//
-// request(url, (error, response, body) => {
-//   const data = JSON.parse(body);
-//   console.log(`It's currently ${data.main.temp}`);
-// })
 
 
   app.post('/chat-bot', (request, response) => {
@@ -48,7 +49,7 @@
   }
 
   function weatherMap(agent){
-    const weather_city = agent.parameters['geo-city-us'].toLowerCase();
+
     console.log(weather_city);
     agent.add(`Its rainy in ${weather_city}`)
   }
