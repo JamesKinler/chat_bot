@@ -56,5 +56,6 @@
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
   intentMap.set("Need Quote", giveQuote)
+  intentMap.set("Weather", weatherMap)
   agent.handleRequest(intentMap)
 }
