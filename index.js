@@ -58,7 +58,6 @@
     request(url, (error, response, body) => {
       const data = JSON.parse(body);
       console.log(`It's currently ${data.main.temp}`);
-      Response.Output.Write(agent.add('hello'));
       // agent.add(`Its rainy in ${weather_city}`)
     })
 
