@@ -46,13 +46,14 @@
     // const city = 'Fresno';
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&appid=${apiKey}`
 
-    request(url, (error, response, body) => {
+    request(url, (error, response, body, agent) => {
       const data = JSON.parse(body);
+      agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
       console.log(data);
 
       // console.log(`It's currently ${data.main.temp}`);
     })
-    agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
+
 
     console.log(weather_city);
 
