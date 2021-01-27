@@ -57,9 +57,13 @@
 
     request(url, (error, response, body) => {
       const data = JSON.parse(body);
-      console.log(`It's currently ${data.main.temp}`);
+      // console.log(`It's currently ${data.main.temp}`);
+      console.log('test');
+      return data;
       // agent.add(`Its rainy in ${weather_city}`)
     })
+
+    console.log(data);
 
     // console.log(weather_city);
 
