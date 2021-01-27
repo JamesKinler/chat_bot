@@ -7,7 +7,23 @@
   const port = process.env.PORT || 3000
 
 
+  // Weather Code
+  const request = require('request');
+  const weather_city = agent.parameters['geo-city-us'].toLowerCase();
+  const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
 
+  const city = 'Fresno';
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
+
+  request(url, (error, response, body) => {
+    const data = JSON.parse(body);
+
+    function weatherMap(agent){
+      console.log(`It's currently ${data.main.temp}`);
+      console.log(weather_city);
+      agent.add(`Its rainy in ${weather_city}`)
+    }
+  })
 
 
 
@@ -36,35 +52,6 @@
         agent.add("No Matter what people tell you, words and ideas can change the world")
     }
   }
-
-
-  const request = require('request');
-
-  request(url, (error, response, body) => {
-    if(error){
-      console.log('error:', error);
-    } else {
-      console.log('body:', body);
-    }
-    const data = JSON.parse(body);
-
-    function weatherMap(agent){
-      // Weather Code
-      const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
-      const weather_city = agent.parameters['geo-city-us'].toLowerCase();
-
-
-      // const city = 'Fresno';
-      const url = `http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&appid=${apiKey}`
-
-  console.log(data);
-
-      console.log(weather_city);
-
-    }
-    // agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
-    // console.log(`It's currently ${data.main.temp}`);
-  })
 
 
 
