@@ -17,7 +17,8 @@
 // const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
 //
 // request(url, (error, response, body) => {
-//   console.log(body);
+//   const data = JSON.parse(body);
+//   console.log(`It's currently ${data.main.temp}`);
 // })
 
 
@@ -40,12 +41,16 @@
     const quote_type = agent.parameters['TypeOfQuote'].toLowerCase();
     console.log(quote_type);
     if(quote_type == "inspiration"){
-      agent.add("I love women in thongs and that is that")
+      agent.add("The world is filled with roses. You need to pick on and smell it!")
     }else{
         agent.add("No Matter what people tell you, words and ideas can change the world")
     }
+  }
 
-
+  function weatherMap(agent){
+    const weather_city = agent.parameters['sys.geo-city-us'].toLowerCase();
+    console.log(weather_city);
+    agent.add(`Its rainy in ${weather_city}`)
   }
 
   let intentMap = new Map();
