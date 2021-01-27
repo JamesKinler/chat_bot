@@ -41,14 +41,14 @@
     const quote_type = agent.parameters['TypeOfQuote'].toLowerCase();
     console.log(quote_type);
     if(quote_type == "inspiration"){
-      agent.add("The world is filled with roses. You need to pick on and smell it!")
+      agent.add("The world is filled with roses. You need to pick one and smell it!")
     }else{
         agent.add("No Matter what people tell you, words and ideas can change the world")
     }
   }
 
   function weatherMap(agent){
-    const weather_city = agent.parameters['sys.geo-city-us'].toLowerCase();
+    const weather_city = agent.parameters['geo-city-us'].toLowerCase();
     console.log(weather_city);
     agent.add(`Its rainy in ${weather_city}`)
   }
