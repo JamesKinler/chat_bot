@@ -17,8 +17,7 @@
 
   request(url, (error, response, body) => {
     const data = JSON.parse(body);
-
-
+    console.log(`It's currently ${data.main.temp}`);
   })
 
 
@@ -49,7 +48,11 @@
     }
   }
 
+  function weatherMap(agent){
 
+    console.log(weather_city);
+    agent.add(`Its rainy in ${weather_city}`)
+  }
 
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
