@@ -37,30 +37,36 @@
     }
   }
 
-  function weatherMap(agent){
-    // Weather Code
-    const request = require('request');
-    const weather_city = agent.parameters['geo-city-us'].toLowerCase();
-    const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
 
-    // const city = 'Fresno';
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&appid=${apiKey}`
+  const request = require('request');
 
-    request(url, (error, response, body) => {
-      if(error){
-        console.log('error:', error);
-      } else {
-        console.log('body:', body);
-      }
-      const data = JSON.parse(body);
-      console.log(data);
-      // agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
-      // console.log(`It's currently ${data.main.temp}`);
-    })
+  request(url, (error, response, body) => {
+    if(error){
+      console.log('error:', error);
+    } else {
+      console.log('body:', body);
+    }
+    const data = JSON.parse(body);
 
-    console.log(weather_city);
+    function weatherMap(agent){
+      // Weather Code
+      const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
+      const weather_city = agent.parameters['geo-city-us'].toLowerCase();
 
-  }
+
+      // const city = 'Fresno';
+      const url = `http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&appid=${apiKey}`
+
+  console.log(data);
+
+      console.log(weather_city);
+
+    }
+    // agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
+    // console.log(`It's currently ${data.main.temp}`);
+  })
+
+
 
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
