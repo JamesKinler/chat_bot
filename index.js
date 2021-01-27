@@ -48,10 +48,9 @@
   }
 
   function weatherMap(agent){
-    // const weather_city = agent.parameters['sys.geo-city-us'].toLowerCase();
-    // console.log(weather_city);
-    // console.log('test');
-    agent.add("its rainy")
+    const weather_city = agent.parameters['geo-city-us'].toLowerCase();
+    console.log(weather_city);
+    agent.add(`Its rainy in ${weather_city}`)
   }
 
   let intentMap = new Map();
