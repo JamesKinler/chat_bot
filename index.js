@@ -48,7 +48,8 @@
 
     request(url, (error, response, body) => {
       const data = JSON.parse(body);
-      console.log(`It's currently ${data.main.temp}`);
+      console.log(data);
+      // console.log(`It's currently ${data.main.temp}`);
     })
 
     console.log(weather_city);
