@@ -47,6 +47,11 @@
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&appid=${apiKey}`
 
     request(url, (error, response, body) => {
+      if(error){
+        console.log('error:', error);
+      } else {
+        console.log('body:', body);
+      }
       const data = JSON.parse(body);
       console.log(data);
       // agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
