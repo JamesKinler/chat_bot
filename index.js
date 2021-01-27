@@ -48,12 +48,13 @@
 
     request(url, (error, response, body, agent) => {
       const data = JSON.parse(body);
-      agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
-      console.log(data);
+      // agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
+
 
       // console.log(`It's currently ${data.main.temp}`);
-    })
 
+    })
+  console.log(data);
 
     console.log(weather_city);
 
