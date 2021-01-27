@@ -48,7 +48,7 @@
   }
 
   function weatherMap(agent){
-    // const weather_city = agent.parameters['geo-city-us'].toLowerCase();
+    const weather_city = agent.parameters['geo-city-us'].toLowerCase();
     const request = require('request');
     const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
 
