@@ -43,15 +43,16 @@
     const weather_city = agent.parameters['geo-city-us'].toLowerCase();
     const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
 
-
     // const city = 'Fresno';
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&appid=${apiKey}`
 
     request(url, (error, response, body) => {
-       data = JSON.parse(body);
+      const data = JSON.parse(body);
+      console.log(data);
       // agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
       // console.log(`It's currently ${data.main.temp}`);
     })
+
     console.log(weather_city);
 
   }
