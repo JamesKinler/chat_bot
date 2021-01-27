@@ -18,11 +18,7 @@
   request(url, (error, response, body) => {
     const data = JSON.parse(body);
 
-    function weatherMap(agent){
-      console.log(`It's currently ${data.main.temp}`);
-      console.log(weather_city);
-      agent.add(`Its rainy in ${weather_city}`)
-    }
+
   })
 
 
