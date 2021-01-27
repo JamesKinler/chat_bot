@@ -49,11 +49,12 @@
     request(url, (error, response, body) => {
       const data = JSON.parse(body);
       console.log(data);
+      agent.add(`In ${weather_city} It's currently ${data.weather.description} with temps of ${data.main.temp}`)
       // console.log(`It's currently ${data.main.temp}`);
     })
 
     console.log(weather_city);
-    agent.add(`Its rainy in ${weather_city}`)
+
   }
 
   let intentMap = new Map();
