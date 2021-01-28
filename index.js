@@ -11,8 +11,8 @@
   // const request = require('request');
   // const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
   //
-  // const city = 'Fresno';
-  // const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
+  const city = 'Fresno';
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
   //
   // request(url, (error, response, body) => {
   //   const data = JSON.parse(body);
@@ -27,9 +27,9 @@
 
   })
 
-  // app.get(url, (request, response, body, error) => {
-  //   weatherRequest(request, response)
-  // })
+  app.get(url, (request, response, body, error) => {
+    weatherRequest(request, response)
+  })
 
 
 
@@ -55,10 +55,10 @@
   }
 
   function weatherMap(agent){
-    // const weatherRequest = (request, response, body) => {
-    //   console.log(body);
-    //   console.log('wow');
-    // }
+    const weatherRequest = (request, response, body) => {
+      console.log(body);
+      console.log('wow');
+    }
     const weather_city = agent.parameters['geo-city-us'].toLowerCase();
 
 
