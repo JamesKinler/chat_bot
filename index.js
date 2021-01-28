@@ -11,8 +11,8 @@
   // const request = require('request');
   // const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
   //
-  const city = 'Fresno';
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
+  // const city = 'Fresno';
+  // const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
   //
   // request(url, (error, response, body) => {
   //   const data = JSON.parse(body);
