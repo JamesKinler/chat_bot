@@ -8,7 +8,7 @@
 
 
   // Weather Code
-  // const request = require('request');
+  const request = require('request');
   const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
   //
   const city = 'Fresno';
