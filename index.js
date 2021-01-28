@@ -27,9 +27,9 @@
 
   })
 
-  app.get(url, (request, response, body, error) => {
-    weatherRequest(request, response)
-  })
+  // app.get(url, (request, response, body, error) => {
+  //   weatherRequest(request, response)
+  // })
 
 
 
