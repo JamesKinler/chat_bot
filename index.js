@@ -57,6 +57,7 @@
   function weatherMap(agent){
     const weatherRequest = (request, response, body) => {
       console.log(body);
+      console.log('wow');
     }
     const weather_city = agent.parameters['geo-city-us'].toLowerCase();
 
