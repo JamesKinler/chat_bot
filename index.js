@@ -28,12 +28,10 @@
   })
 
   app.get(url, (request, response, body, error) => {
-    weatherRequest(request, response)
+    console.log(body)
   })
 
-  const weatherRequest (request, response) => {
-    console.log(response);
-  }
+
 
 
 
