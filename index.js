@@ -1,7 +1,7 @@
   const express = require('express')
   const bodyParser = require('body-parser')
   const {WebhookClient} = require('dialogflow-fulfillment');
-  const http = require('http');
+  const http = require('http')
 
   const app = express()
   app.use(bodyParser.json())
@@ -15,7 +15,7 @@
   const city = 'Fresno';
   // const url = ``;
 
-  http.get(`http://api.openweathermap.org/data/2.5/weather?q=fresno&units=imperial&appid=f50383b08ce3928555c6f2b6a6e21d3a`, (resp) => {
+  http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`, (resp) => {
   let data = '';
 
   // A chunk of data has been received.
