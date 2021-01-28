@@ -24,7 +24,8 @@
   });
 
   resp.on('end', () => {
-   console.log(JSON.parse(data));
+    const weatherData = JSON.parse(data);
+   console.log(`It's currently ${weatherData.main.temp}`);
  });
 
 }).on("error", (err) => {
