@@ -25,7 +25,7 @@
 
   resp.on('end', () => {
     const weatherData = JSON.parse(data);
-   console.log(`It's currently ${weatherData.main.temp}`);
+   console.log(`It's currently ${weatherDataw.main.temp}`);
  });
 
 }).on("error", (err) => {
