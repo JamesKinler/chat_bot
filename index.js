@@ -72,14 +72,14 @@
     resp.on('end', () => {
       const weatherData = JSON.parse(data);
      console.log(`It's currently ${weatherData.main.temp}`);
-     agent.add(`It's currently ${weatherData.main.temp}`)
+
    });
 
   }).on("error", (err) => {
    console.log("Error: " + err.message);
   });
 
-
+agent.add(`It's currently ${weatherData.main.temp}`)
     // console.log(weather_city);
 
   }
