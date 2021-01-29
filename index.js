@@ -19,7 +19,7 @@
   axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
   .then(function (response) {
     // handle success
-    console.log(response);
+    console.log(response.data.main);
   })
   .catch(function (error) {
     // handle error
