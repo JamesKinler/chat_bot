@@ -1,17 +1,55 @@
   const express = require('express')
   const bodyParser = require('body-parser')
   const {WebhookClient} = require('dialogflow-fulfillment');
-  // const axios = require('axios');
+  const http = require('http')
 
   const app = express()
   app.use(bodyParser.json())
   const port = process.env.PORT || 3000
 
 
+  // Weather Code
+  // const request = require('request');
+  const apiKey = 'f50383b08ce3928555c6f2b6a6e21d3a';
+  //
+  const city = 'Fresno';
+  // const url = ``;
+
+  http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`, (resp) => {
+  let data = '';
+
+  // A chunk of data has been received.
+  resp.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  resp.on('end', () => {
+    const weatherData = JSON.parse(data);
+   console.log(`It's currently ${weatherData.main.temp}`);
+ });
+
+}).on("error", (err) => {
+ console.log("Error: " + err.message);
+});
+  //
+  // request(url, (error, response, body) => {
+  //   const data = JSON.parse(body);
+  //   console.log(`It's currently ${data.main.temp}`);
+  // })
+
+
+
+
   app.post('/chat-bot', (request, response) => {
     chatBot(request, response)
 
   })
+
+
+
+
+
+
 
   app.listen(port, () => {
     console.log(`listing on port ${port}`)
@@ -37,7 +75,6 @@
   function weatherMap(agent){
 
     const weather_city = agent.parameters['geo-city-us'].toLowerCase();
-
 
 
     // console.log(weather_city);
