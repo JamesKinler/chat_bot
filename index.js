@@ -16,10 +16,10 @@
     console.log(`listing on port ${port}`)
   })
 
-  axios.get('http://api.openweathermap.org/data/2.5/forecast?q=fresno,california&units=imperial&APPID=f50383b08ce3928555c6f2b6a6e21d3a')
+  axios.get('http://api.openweathermap.org/data/2.5/weather?q=fresno,california&units=imperial&APPID=f50383b08ce3928555c6f2b6a6e21d3a')
   .then(function (response) {
     // handle success
-    console.log(response.data.city);
+    console.log(response.data);
   })
   .catch(function (error) {
     // handle error
