@@ -44,9 +44,10 @@
       // handle success
       console.log(response.data);
       response.data.map(weatherObj =>{
-        agent.add(weatherObj.main.temp);
+        console.log(weatherObj.main);
+        // agent.add(weatherObj.main.temp);
       });
-    
+
     })
     .catch(function (error) {
       // handle error
