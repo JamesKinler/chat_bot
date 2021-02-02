@@ -43,10 +43,7 @@
     .then((response) => {
       // handle success
       // console.log(response.data);
-      response.data.map(weatherObj => {
-        console.log(weatherObj.main);
-        // agent.add(weatherObj.main.temp);
-      });
+      agent.add('hello its cold here');
 
     })
     .catch(function (error) {
