@@ -26,10 +26,9 @@
   }
 
   function giveImage(agent){
+    const demo_jpg = "https://ibb.co/wCFvLQr";
     console.log('sent');
-    agent.add(
-      new Image('https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg')
-    )
+    agent.add(`${demo_jpg}`)
   }
 
   function giveQuote(agent){
