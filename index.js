@@ -16,18 +16,7 @@
     console.log(`listing on port ${port}`)
   })
 
-  axios.get('http://api.openweathermap.org/data/2.5/weather?q=fresno,california&units=imperial&APPID=f50383b08ce3928555c6f2b6a6e21d3a')
-  .then(function (response) {
-    // handle success
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .then(function () {
-    // always executed
-  });
+
 
   const chatBot = (request, response) => {
   const agent = new WebhookClient({request, response})
@@ -46,9 +35,14 @@
     }
   }
 
+  function weatherApi(agent){
+    agent.add("the weather is cold")
+  }
+
 
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
   intentMap.set("Need Quote", giveQuote)
+  intentMap.set("Weather", weatherApi)
   agent.handleRequest(intentMap)
 }
