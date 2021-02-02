@@ -43,8 +43,9 @@
     .then((response) => {
       // handle success
       // console.log(response.data);
-      const temp = response.data.main.temp
-      agent.add(`the current temperature is ${temp}`);
+      const temp = response.data.main.temp;
+      const weather_icon = response.data.weather.icon;
+      agent.add(`the current temperature is ${weather_icon} ${temp}`);
 
     })
     .catch((error) => {
