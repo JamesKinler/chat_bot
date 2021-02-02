@@ -21,6 +21,8 @@
   const chatBot = (request, response) => {
   const agent = new WebhookClient({request, response, data})
 
+  console.log(agent);
+
   function sayHello(agent){
     agent.add("Hello my name is Austin how can i help you?")
   }
