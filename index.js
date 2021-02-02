@@ -37,21 +37,22 @@
 
   function weatherApi(agent){
     // agent.add("the weather is cold")
-    // const weather_city = agent.parameters['geo-city-us'].toLowerCase();
-    return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=fresno&units=imperial&APPID=f50383b08ce3928555c6f2b6a6e21d3a`)
-    .then(function (response) {
-      // handle success
-      console.log(response.data);
-      // response.data.main.map(weatherObj =>{
-      //   agent.add(weatherObj.temp);
-      // });
-      // agent.add(response.data.main.temp);
-
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    })
+    const weather_city = agent.parameters['geo-city-us'].toLowerCase();
+    console.log(weather_city);
+    // return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&APPID=f50383b08ce3928555c6f2b6a6e21d3a`)
+    // .then(function (response) {
+    //   // handle success
+    //   console.log(response.data);
+    //   // response.data.main.map(weatherObj =>{
+    //   //   agent.add(weatherObj.temp);
+    //   // });
+    //   // agent.add(response.data.main.temp);
+    //
+    // })
+    // .catch(function (error) {
+    //   // handle error
+    //   console.log(error);
+    // })
   }
 
 
