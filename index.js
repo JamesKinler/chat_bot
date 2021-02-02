@@ -43,10 +43,11 @@
     .then((response) => {
       // handle success
       // console.log(response.data);
-      agent.add(response.data.main.temp);
+      const temp = response.data.main.temp
+      agent.add(`the current temperature is ${temp}`);
 
     })
-    .catch(function (error) {
+    .catch((error) => {
       // handle error
       console.log(error);
     })
