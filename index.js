@@ -18,19 +18,28 @@
 
 
 
-  const chatBot = (request, response, data) => {
-  const agent = new WebhookClient({request, response, data})
+  const chatBot = (request, response) => {
+  const agent = new WebhookClient({request, response})
 
-  console.log(agent);
 
   function sayHello(agent){
     agent.add("Hello my name is Austin how can i help you?")
   }
 
   function giveImage(agent){
-    const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
+    // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     console.log('sent');
-    agent.add(`${demo_jpg}`)
+    agent.add(
+      "richContent": [
+        [
+          {
+            "type" : "image",
+            "accessibilityText" : "text",
+            "rawUrl" : "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg"
+          }
+        ]
+      ]
+    )
   }
 
   function giveQuote(agent){
