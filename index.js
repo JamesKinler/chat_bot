@@ -45,7 +45,7 @@
     }),
     image: new Image({
       url: 'https://storage.googleapis.com/actionsresources/logo_assistant_2x_64dp.png',
-      alt: 'Image alternate text',
+      alt: 'Image  text',
     }),
     display: 'CROPPED',
   })
