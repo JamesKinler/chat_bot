@@ -44,7 +44,7 @@
       console.log(response.data.main.temp);
       // response.data.main.map(weatherObj =>{
       //   agent.add(weatherObj.temp);
-      });
+      // });
       // agent.add(response.data.main.temp);
 
     })
