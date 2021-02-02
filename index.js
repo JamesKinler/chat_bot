@@ -42,7 +42,10 @@
     .then(function (response) {
       // handle success
       console.log(response.data);
-      agent.add(response.data.main.temp);
+      response.data.main.map(weatherObj =>{
+        agent.add(weatherObj.temp);
+      });
+      // agent.add(response.data.main.temp);
 
     })
     .catch(function (error) {
