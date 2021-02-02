@@ -18,7 +18,7 @@
 
 
 
-  const chatBot = (request, response) => {
+  const chatBot = (request, response, data) => {
   const agent = new WebhookClient({request, response, data})
 
   console.log(agent);
