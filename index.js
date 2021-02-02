@@ -25,6 +25,11 @@
     agent.add("Hello my name is Austin how can i help you?")
   }
 
+  function giveImage(agent){
+    const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
+    agent.add(`${demo_jpg}`)
+  }
+
   function giveQuote(agent){
     const quote_type = agent.parameters['TypeOfQuote'].toLowerCase();
     console.log(quote_type);
@@ -58,5 +63,6 @@
   intentMap.set("Default Welcome Intent", sayHello)
   intentMap.set("Need Quote", giveQuote)
   intentMap.set("Weather", weatherApi)
+  intentMap.set("image", giveImage)
   agent.handleRequest(intentMap)
 }
