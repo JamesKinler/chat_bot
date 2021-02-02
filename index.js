@@ -29,7 +29,7 @@
   function giveImage(agent){
     const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     console.log('sent');
-    agent.add(`${demo_jpg}`)
+    agent.add(new Image('https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'));
   }
 
   function giveQuote(agent){
