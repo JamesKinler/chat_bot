@@ -26,7 +26,7 @@
   }
 
   function giveImage(agent){
-    const demo_jpg = "https://ibb.co/wCFvLQr";
+    const demo_jpg = "image text for now";
     console.log('sent');
     agent.add(`${demo_jpg}`)
   }
