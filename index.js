@@ -44,7 +44,7 @@
       // handle success
       // console.log(response.data);
       const temp = response.data.main.temp;
-      const weather_icon = response.data.weather.icon;
+      const weather_icon = "<img src=http://openweathermap.org/img/wn/" +response.data.weather.icon+".png>";
       agent.add(`the current temperature is ${weather_icon} ${temp}`);
 
     })
