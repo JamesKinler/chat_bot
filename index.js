@@ -43,7 +43,7 @@
     .then((response) => {
       // handle success
       // console.log(response.data);
-      agent.add('hello its cold here');
+      agent.add(response.data.main.temp);
 
     })
     .catch(function (error) {
