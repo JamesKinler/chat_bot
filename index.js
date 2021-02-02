@@ -41,9 +41,9 @@
     return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&APPID=f50383b08ce3928555c6f2b6a6e21d3a`)
     .then(function (response) {
       // handle success
-      console.log(response.data);
-      response.data.main.map(weatherObj =>{
-        agent.add(weatherObj.temp);
+      console.log(response.data.main.temp);
+      // response.data.main.map(weatherObj =>{
+      //   agent.add(weatherObj.temp);
       });
       // agent.add(response.data.main.temp);
 
