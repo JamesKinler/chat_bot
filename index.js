@@ -29,8 +29,11 @@
 
   function giveImage(agent){
     agent.add(new Card({
-      imageURL: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'
-    }))
+      title: "girl",
+      imageURL: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
+      text: "model"
+    })
+  )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     // console.log('sent');
     agent.add('Here is your image');
