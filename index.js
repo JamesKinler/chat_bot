@@ -31,10 +31,19 @@
   function giveImage(agent){
     // agent.add("Here is an image")
 
-    const payload = {
-      key: 'value',
-      key2: 2
-    };
+    const payload = 
+      {
+  "richContent": [
+    [
+      {
+        "type": "image",
+        "rawUrl": "https://example.com/images/logo.png",
+        "accessibilityText": "Example logo"
+      }
+    ]
+  ]
+}
+
 
     agent.add(
       new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
