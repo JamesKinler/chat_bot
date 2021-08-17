@@ -33,7 +33,7 @@
   function giveImage(agent){
     agent.add(new BasicCard({
   text: 'This is a basic card.  Text in a basic card can include  and
-  most other unicode characters including emojis',  
+  most other unicode characters including emojis',
   title: 'Title: this is a title',
   buttons: new Button({
     title: 'This is a button',
@@ -44,7 +44,7 @@
     alt: 'Image alternate text',
   }),
   display: 'CROPPED',
-}))
+}));
     // agent.add(new Image({
     //   imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
     //   alt: 'an image',
