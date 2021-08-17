@@ -29,7 +29,7 @@
   }
 
   function giveImage(agent){
-    agent.add("Hello my name is Austin how can i help you?")
+    agent.add("Here is an image")
 
 //   var payloadData = {
 //   "richContent": [
