@@ -52,7 +52,7 @@
 
 
     agent.add(
-      new Payload(agent.UNSPECIFIED, payload, {rawPayload: false, sendAsMessage: true})
+      new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
     );
 
 
