@@ -29,25 +29,26 @@
   }
 
   function giveImage(agent){
+    agent.add("Hello my name is Austin how can i help you?")
 
-  var payloadData = {
-  "richContent": [
-    [
-      {
-        "type": "info",
-        "title": "Info item title",
-        "subtitle": "Info item subtitle",
-        "image": {
-          "src": {
-            "rawUrl": "https://example.com/images/logo.png"
-          }
-        },
-        "actionLink": "https://example.com"
-      }
-    ]
-  ]
-}
-agent.add(new Payload(agent.UNSPECIFIED, payloadData, {rawPayload: true, sendAsMessage: true}))
+//   var payloadData = {
+//   "richContent": [
+//     [
+//       {
+//         "type": "info",
+//         "title": "Info item title",
+//         "subtitle": "Info item subtitle",
+//         "image": {
+//           "src": {
+//             "rawUrl": "https://example.com/images/logo.png"
+//           }
+//         },
+//         "actionLink": "https://example.com"
+//       }
+//     ]
+//   ]
+// }
+// agent.add(new Payload(agent.UNSPECIFIED, payloadData, {rawPayload: true, sendAsMessage: true}))
 
   // )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
