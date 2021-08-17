@@ -48,7 +48,7 @@
     ]
   ]
 }
-agent.add(new Payload(platform.UNSPECIFIED, payloadData, {rawPayload: true, sendAsMessage: true}))
+agent.add(new Payload(agent.UNSPECIFIED, payloadData, {sendAsMessage: true, rawPayload: true}))
 
   // )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
