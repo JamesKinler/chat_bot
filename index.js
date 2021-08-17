@@ -21,7 +21,10 @@
 
 
   const chatBot = (request, response) => {
-  const agent = new WebhookClient({request, response})
+  const agent = new df.WebhookClient({
+    request: req,
+    response: res
+  })
 
 
   function sayHello(agent){
@@ -44,7 +47,7 @@
       ]
     }
 
-agent.add(new Payload(agent.UNSPECIFIED, payloadData, {sendAsMessage: true, rawPayload: true}))
+agent.add(new df.Payload(agent.UNSPECIFIED, payloadData, {sendAsMessage: true, rawPayload: true}))
 
   // )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
