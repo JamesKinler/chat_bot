@@ -18,6 +18,15 @@
   })
 
 
+  conv.ask(new BasicCard({
+  title: 'Card Title',
+  image: { // Mostly, provide anonymous Objects with the properties defined by the raw JSON API
+    url: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+    accessibilityText: 'Google Logo',
+  },
+  // Some complex objects have class wrappers but can use raw API when need,
+  display: 'WHITE',
+}));
 
   const chatBot = (request, response) => {
   const agent = new WebhookClient({request, response})
@@ -30,7 +39,8 @@
   function giveImage(agent){
     agent.add(new Image({
       imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
-    }, display: 'DEFAULT')
+      display: 'DEFAULT'
+    })
   )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     // console.log('sent');
