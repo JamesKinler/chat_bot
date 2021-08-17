@@ -30,8 +30,8 @@
   function giveImage(agent){
     agent.add(new Image({
       imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
-      display: 'CROPPED'
-    })
+
+    },display: 'WHITE')
   )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     // console.log('sent');
