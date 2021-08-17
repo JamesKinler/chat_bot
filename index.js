@@ -31,7 +31,7 @@
   function giveImage(agent){
     // agent.add("Here is an image")
 
-    var payload =
+    const payload =
       {
   "richContent": [
     [
