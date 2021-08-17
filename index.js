@@ -30,17 +30,25 @@
 
 
 
-
-
   function giveImage(agent){
     agent.add(new BasicCard({
-      image: new Image({
-        url: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
-        alt: 'an image',
-      }),
-      display: 'WHITE',
-    })
-  )
+  text: 'This is a basic card.  Text in a basic card can include  and
+  most other unicode characters including emojis',  
+  title: 'Title: this is a title',
+  buttons: new Button({
+    title: 'This is a button',
+    url: 'https://assistant.google.com/',
+  }),
+  image: new Image({
+    url: 'https://storage.googleapis.com/actionsresources/logo_assistant_2x_64dp.png',
+    alt: 'Image alternate text',
+  }),
+  display: 'CROPPED',
+}))
+    // agent.add(new Image({
+    //   imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
+    //   alt: 'an image',
+    // }))
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     // console.log('sent');
     // agent.add(new Image('https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'));
