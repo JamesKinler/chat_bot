@@ -1,7 +1,7 @@
   const express = require('express')
   const bodyParser = require('body-parser')
   const {WebhookClient} = require('dialogflow-fulfillment');
-  const {Card,Suggestion,Image} = require('dialogflow-fulfillment');
+  const {Card,Suggestion,Image,Payload} = require('dialogflow-fulfillment');
   const axios = require('axios');
 
   const app = express()
@@ -33,20 +33,20 @@
 
     const payload =
     {
-      "fulfillmentMessages": [
-        {
-          "card": {
-            "title": "card title",
-            "subtitle": "card text",
-            "imageUri": "https://example.com/images/example.png",
-            "buttons": [
-              {
-                "text": "button text",
-                "postback": "https://example.com/path/for/end-user/to/follow"
+      "richContent": [
+        [
+          {
+            "type": "info",
+            "title": "Info item title",
+            "subtitle": "Info item subtitle",
+            "image": {
+              "src": {
+                "rawUrl": "https://example.com/images/logo.png"
               }
-            ]
+            },
+            "actionLink": "https://example.com"
           }
-        }
+        ]
       ]
     }
 
