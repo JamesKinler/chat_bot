@@ -37,7 +37,7 @@
         [
           {
             "type": "image",
-            "rawUrl": "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg",
+            "rawUrl": "https://babe.today/pics/milehighmedia/abella-danger/international-thong-caiunoxvideos/abella-danger-12.jpg",
             "accessibilityText": "Example logo"
           }
         ]
