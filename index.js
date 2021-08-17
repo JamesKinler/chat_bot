@@ -28,10 +28,13 @@
   }
 
   function giveImage(agent){
-    const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
-    console.log('sent');
+    agent.add(new Card{
+      imageURL: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'
+    })
+    // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
+    // console.log('sent');
     agent.add('Here is your image');
-    agent.add(new Image('https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'), display: 'DEFAULT');
+    // agent.add(new Image('https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'));
   }
 
   function giveQuote(agent){
