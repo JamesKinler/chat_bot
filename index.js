@@ -1,7 +1,7 @@
   const express = require('express')
   const bodyParser = require('body-parser')
   const {WebhookClient} = require('dialogflow-fulfillment');
-  const {Image} = require('dialogflow-fulfillment');
+  const {Card, Image} = require('dialogflow-fulfillment');
   const axios = require('axios');
 
   const app = express()
