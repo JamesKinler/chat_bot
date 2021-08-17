@@ -36,19 +36,14 @@
       "richContent": [
         [
           {
-            "type": "info",
-            "title": "Info item title",
-            "subtitle": "Info item subtitle",
-            "image": {
-              "src": {
-                "rawUrl": "https://example.com/images/logo.png"
-              }
-            },
-            "actionLink": "https://example.com"
+            "type": "image",
+            "rawUrl": "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg",
+            "accessibilityText": "Example logo"
           }
         ]
       ]
     }
+
 
 
     agent.add(
