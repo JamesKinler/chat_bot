@@ -19,6 +19,7 @@
 
 
 
+
   const chatBot = (request, response) => {
   const agent = new WebhookClient({request, response})
 
@@ -29,9 +30,9 @@
 
   function giveImage(agent){
     agent.add(new Image({
-      imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
-
-    },display: 'WHITE')
+      imageUrl: 'https://storage.googleapis.com/actionsresources/logo_assistant_2x_64dp.png',
+      display: 'DEFAULT'
+    })
   )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     // console.log('sent');
