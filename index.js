@@ -29,36 +29,36 @@
   }
 
   function giveImage(agent){
-    // agent.add("Here is an image")
+    agent.add("Here is an image")
 
-    const payload =
-    {
-      "richContent": [
-        [
-          {
-            "type": "info",
-            "title": "Info item title",
-            "subtitle": "Info item subtitle",
-            "image": {
-              "src": {
-                "rawUrl": "https://example.com/images/logo.png"
-              }
-            },
-            "actionLink": "https://example.com"
-          }
-        ]
-      ]
-    }
-
-
-    agent.add(
-      new Payload(agent.UNSPECIFIED, payload, {rawPayload: false, sendAsMessage: true})
-    );
+    // const payload =
+    // {
+    //   "richContent": [
+    //     [
+    //       {
+    //         "type": "info",
+    //         "title": "Info item title",
+    //         "subtitle": "Info item subtitle",
+    //         "image": {
+    //           "src": {
+    //             "rawUrl": "https://example.com/images/logo.png"
+    //           }
+    //         },
+    //         "actionLink": "https://example.com"
+    //       }
+    //     ]
+    //   ]
+    // }
+    //
+    //
+    // agent.add(
+    //   new Payload(agent.UNSPECIFIED, payload, {rawPayload: false, sendAsMessage: true})
+    // );
 
   // )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     // console.log('sent');
-    // agent.add(new Image('https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'));
+    agent.add(new Image('https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'));
   }
 
   function giveQuote(agent){
