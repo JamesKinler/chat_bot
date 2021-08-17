@@ -28,21 +28,11 @@
     agent.add("Hello my name is Austin how can i help you?")
   }
 
-
-
   function giveImage(agent){
-    agent.add(new Card({
-     title: `Khoon hazir`,
-     imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
-     text: `This is an online Blood bank, aim to save lives`,
-     buttonText: 'Need Blood',
-     buttonUrl: 'https://www.facebook.com/khoon.hazir/',
-     display: 'DEFAULT'
-     }))
     agent.add(new Image({
       imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
-      alt: 'an image',
-    }))
+    })
+  )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     // console.log('sent');
     // agent.add(new Image('https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg'));
