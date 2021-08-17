@@ -32,17 +32,23 @@
     // agent.add("Here is an image")
 
     const payload =
-      {
-  "richContent": [
-    [
-      {
-        "type": "image",
-        "rawUrl": "https://example.com/images/logo.png",
-        "accessibilityText": "Example logo"
-      }
-    ]
-  ]
-}
+    {
+      "fulfillmentMessages": [
+        {
+          "card": {
+            "title": "card title",
+            "subtitle": "card text",
+            "imageUri": "https://example.com/images/example.png",
+            "buttons": [
+              {
+                "text": "button text",
+                "postback": "https://example.com/path/for/end-user/to/follow"
+              }
+            ]
+          }
+        }
+      ]
+    }
 
 
     agent.add(
