@@ -31,13 +31,20 @@
 
 
   function giveImage(agent){
-    agent.add(new Card({
-         title: `Khoon hazir`,
-         imageUrl: 'https://images.pexels.com/photos/355296/pexels-photo-355296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-         text: `This is an online Blood bank, aim to save lives`,
-         buttonText: 'Need Blood',
-         buttonUrl: 'https://www.facebook.com/khoon.hazir/'
-     }))
+    agent.add(new BasicCard({
+  text: `This is a basic card.  Text in a basic card can include  and
+  most other unicode characters including emojis`,
+  title: `Title: this is a title`,
+  buttons: new Button({
+    title: `This is a button`,
+    url: 'https://assistant.google.com/',
+  }),
+  image: new Image({
+    url: 'https://storage.googleapis.com/actionsresources/logo_assistant_2x_64dp.png',
+    alt: 'Image alternate text',
+  }),
+  display: 'CROPPED',
+}))
     // agent.add(new Image({
     //   imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
     //   alt: 'an image',
