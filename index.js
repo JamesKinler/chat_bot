@@ -31,23 +31,19 @@
   function giveImage(agent){
     // agent.add("Here is an image")
 
-  var payloadData = {
-  "richContent": [
-    [
-      {
-        "type": "info",
-        "title": "Info item title",
-        "subtitle": "Info item subtitle",
-        "image": {
-          "src": {
-            "rawUrl": "https://example.com/images/logo.png"
+  var payloadData =
+    {
+      "richContent": [
+        [
+          {
+            "type": "image",
+            "rawUrl": "https://example.com/images/logo.png",
+            "accessibilityText": "Example logo"
           }
-        },
-        "actionLink": "https://example.com"
-      }
-    ]
-  ]
-}
+        ]
+      ]
+    }
+
 agent.add(new Payload(agent.UNSPECIFIED, payloadData, {sendAsMessage: true, rawPayload: true}))
 
   // )
