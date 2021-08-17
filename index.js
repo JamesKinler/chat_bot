@@ -21,10 +21,7 @@
 
 
   const chatBot = (request, response) => {
-  const agent = new df.WebhookClient({
-    request: req,
-    response: res
-  })
+  const agent = new WebhookClient({request, response})
 
 
   function sayHello(agent){
@@ -34,20 +31,14 @@
   function giveImage(agent){
     // agent.add("Here is an image")
 
-  var payloadData =
-    {
-      "richContent": [
-        [
-          {
-            "type": "image",
-            "rawUrl": "https://example.com/images/logo.png",
-            "accessibilityText": "Example logo"
-          }
-        ]
-      ]
-    }
+    const payload = {
+      key: 'value',
+      key2: 2
+    };
 
-agent.add(new df.Payload(agent.UNSPECIFIED, payloadData, {sendAsMessage: true, rawPayload: true}))
+    agent.add(
+      new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
+    );
 
   // )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
