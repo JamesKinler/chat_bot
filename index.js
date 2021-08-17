@@ -28,12 +28,17 @@
     agent.add("Hello my name is Austin how can i help you?")
   }
 
+
+
+
+
   function giveImage(agent){
-    agent.add(new Image({
-      imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
-      alt: 'an image',
-      height: 300
-      // width: 90
+    agent.add(new BasicCard({
+      image: new Image({
+        imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
+        alt: 'an image',
+      }),
+      display: 'WHITE',
     })
   )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
