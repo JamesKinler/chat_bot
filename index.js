@@ -32,8 +32,8 @@
     agent.add(new Image({
       imageUrl: 'https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg',
       alt: 'an image',
-      height: 90,
-      width: 90
+      height: 300
+      // width: 90
     })
   )
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
