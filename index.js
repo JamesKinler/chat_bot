@@ -44,6 +44,14 @@
       ]
     }
 
+
+
+
+
+    agent.add(
+      new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
+    );
+
     if (yes) {
     agent.add(`i love cats too`);
 } else if (no) {
@@ -51,12 +59,6 @@
 } else {
     agent.add(`idk what you are talking about?`);
 }
-
-
-
-    agent.add(
-      new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
-    );
 
 
 
