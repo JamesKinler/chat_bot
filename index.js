@@ -29,7 +29,7 @@
   }
 
   function giveImage(agent){
-    agent.add("Here is the pic")
+    agent.add("Do you like the photo yes or no?")
 
     const payload =
     {
@@ -37,18 +37,27 @@
         [
           {
             "type": "image",
-            "rawUrl": "https://babe.today/pics/milehighmedia/abella-danger/international-thong-caiunoxvideos/abella-danger-12.jpg",
+            "rawUrl": "https://i.natgeofe.com/n/f0dccaca-174b-48a5-b944-9bcddf913645/01-cat-questions-nationalgeographic_1228126.jpg",
             "accessibilityText": "Example logo"
           }
         ]
       ]
     }
 
+    if (yes) {
+    agent.add(`i love cats too`);
+} else if (no) {
+    agent.add(`Cats are cool, you suck!`);
+} else {
+    agent.add(`idk what you are talking about?`);
+}
+
 
 
     agent.add(
       new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
     );
+
 
 
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
