@@ -44,21 +44,9 @@
       ]
     }
 
-
-
-
-
     agent.add(
       new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
     );
-
-    if (yes) {
-    agent.add(`i love cats too`);
-} else if (no) {
-    agent.add(`Cats are cool, you suck!`);
-} else {
-    agent.add(`idk what you are talking about?`);
-}
 
 
 
