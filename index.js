@@ -48,21 +48,25 @@
       new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
     );
 
-      const yes = agent.parameters.yes;
-      const no = agent.parameters.no;
 
-      if (yes) {
-        agent.add(`i love cats too`);
-      } else if (no) {
-        agent.add(`Cats are cool you suck`);
-      } else {
-        agent.add(`idk what you are talking about?`);
-      }
 
 
     // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
     // // console.log('sent');
     // agent.add(new Image(demo_jpg));
+  }
+
+  function answerAction(agent){
+    const yes = agent.parameters.yes;
+    const no = agent.parameters.no;
+
+    if (yes) {
+      agent.add(`i love cats too`);
+    } else if (no) {
+      agent.add(`Cats are cool you suck`);
+    } else {
+      agent.add(`idk what you are talking about?`);
+    }
   }
 
   function giveQuote(agent){
@@ -99,5 +103,6 @@
   intentMap.set("Need Quote", giveQuote)
   intentMap.set("Weather", weatherApi)
   intentMap.set("image", giveImage)
+  intentMap.set("Answer", answerAction)
   agent.handleRequest(intentMap)
 }
