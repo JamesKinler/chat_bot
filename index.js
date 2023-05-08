@@ -11,6 +11,7 @@
 
   app.post('/chat-bot', (request, response) => {
     chatBot(request, response)
+    // console.log('test');
   })
 
   app.listen(port, () => {
@@ -28,81 +29,8 @@
     agent.add("Hello my name is Austin how can i help you?")
   }
 
-  function giveImage(agent){
-    agent.add("Do you like the photo yes or no?")
-
-    const payload =
-    {
-      "richContent": [
-        [
-          {
-            "type": "image",
-            "rawUrl": "https://i.natgeofe.com/n/f0dccaca-174b-48a5-b944-9bcddf913645/01-cat-questions-nationalgeographic_1228126.jpg",
-            "accessibilityText": "Example logo"
-          }
-        ]
-      ]
-    }
-
-    agent.add(
-      new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
-    );
-
-
-
-
-    // const demo_jpg = "https://cdn1-pornstars.4tube.com/tb/0/0/0/0/0/7/5/1/0/1512479574_275x375.jpg";
-    // // console.log('sent');
-    // agent.add(new Image(demo_jpg));
-  }
-
-  function answerAction(agent){
-    const yes = agent.parameters.yes;
-    const no = agent.parameters.no;
-
-    if (yes) {
-      agent.add(`i love cats too`);
-    } else if (no) {
-      agent.add(`Cats are cool you suck`);
-    } else {
-      agent.add(`idk what you are talking about?`);
-    }
-  }
-
-  function giveQuote(agent){
-    const quote_type = agent.parameters['TypeOfQuote'].toLowerCase();
-    console.log(quote_type);
-    if(quote_type == "inspiration"){
-      agent.add("The world is filled with roses. You need to pick one and smell it!")
-    }else{
-        agent.add("No Matter what people tell you, words and ideas can change the world")
-    }
-  }
-
-  function weatherApi(agent){
-    // agent.add("the weather is cold")
-    const weather_city = agent.parameters['geo-city-us'].toLowerCase();
-    console.log(weather_city);
-    return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&APPID=f50383b08ce3928555c6f2b6a6e21d3a`)
-    .then((response) => {
-      // handle success
-      // console.log(response.data);
-      const temp = response.data.main.temp;
-      agent.add(`the current temperature is ${temp}`);
-
-    })
-    .catch((error) => {
-      // handle error
-      console.log(error);
-    })
-  }
-
 
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
-  intentMap.set("Need Quote", giveQuote)
-  intentMap.set("Weather", weatherApi)
-  intentMap.set("image", giveImage)
-  intentMap.set("Answer", answerAction)
   agent.handleRequest(intentMap)
 }
