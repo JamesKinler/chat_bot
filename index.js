@@ -1,11 +1,8 @@
   const express = require('express')
-  const bodyParser = require('body-parser')
   const {WebhookClient} = require('dialogflow-fulfillment');
-  const {Card,Suggestion,Image,Payload} = require('dialogflow-fulfillment');
   const axios = require('axios');
 
   const app = express()
-  app.use(bodyParser.json())
   const port = process.env.PORT || 3000
 
 
