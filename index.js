@@ -1,13 +1,11 @@
   const express = require('express')
-  const axios = require('axios');
-
   const app = express()
-  const port = process.env.PORT || 3000
+  const port = process.env.PORT || 5000
 
 
-  app.post((request, response) => {
+  app.get((request, response) => {
    
-    console.log('test');
+    response.send('Hello World')
   })
 
   app.listen(port, () => {
