@@ -1,13 +1,35 @@
   const express = require('express')
+  // const bodyParser = require('body-parser')
+  const {WebhookClient} = require('dialogflow-fulfillment');
+  // const {Card,Suggestion,Image,Payload} = require('dialogflow-fulfillment');
+  // const axios = require('axios');
+
   const app = express()
-  const port = process.env.PORT || 5000
+  app.use(express.json())
+  const port = process.env.PORT || 3000
 
 
-  app.get((request, response) => {
-   
-    response.send('Hello World')
+  app.post('/chat-bot', (request, response) => {
+    chatBot(request, response)
   })
 
   app.listen(port, () => {
     console.log(`listing on port ${port}`)
   })
+
+
+
+
+  const chatBot = (request, response) => {
+  const agent = new WebhookClient({request: request, response: response})
+
+
+  function sayHello(agent){
+    agent.add("Hello my name is Austin how can i help you?")
+  }
+
+
+  let intentMap = new Map();
+  intentMap.set("Default Welcome Intent", sayHello)
+  agent.handleRequest(intentMap)
+}
