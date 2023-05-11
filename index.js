@@ -2,7 +2,7 @@
   require('dotenv').config()
   // const bodyParser = require('body-parser')
   const {WebhookClient} = require('dialogflow-fulfillment');
-  const {Card} = require('dialogflow-fulfillment');
+  const {Card,Suggestion,Image,Payload} = require('dialogflow-fulfillment');
   const axios = require('axios');
   const app = express()
   app.use(express.json())
@@ -47,14 +47,19 @@
 
   function imageCard(agent){
     console.log('image function');
-    let json = getCard();
-    let payload = new Payload(
-      'hangouts',
-      json,
-      { rawPayload: true, sendAsMessage: true}
-  );
+    const payload = {
+      "richContent" : [
+        {
+          "type": "image",
+          "rawUrl": "https://ae01.alicdn.com/kf/H97eb3295e2c0481ca46810c39c350dbaI/New-Women-Underwear-Ice-Silk-Thong-Panties-Sexy-Briefs-Seamless-Thongs-Ladies-Panties-G-String-Tangas.jpg",
+          "accessibilityText": "Example logo"
+        }
+      ]
+    }
 
-  agent.add(payload);
+    agent.add(
+      new Payload(agent.UNSPECIFIED, payload, {rawPayload: true, sendAsMessage: true})
+    );
   }
 
 
