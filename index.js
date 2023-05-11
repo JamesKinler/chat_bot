@@ -53,7 +53,7 @@
         [
           {
             "type": "image",
-            "rawUrl": "https://ae01.alicdn.com/kf/H97eb3295e2c0481ca46810c39c350dbaI/New-Women-Underwear-Ice-Silk-Thong-Panties-Sexy-Briefs-Seamless-Thongs-Ladies-Panties-G-String-Tangas.jpg",
+            "rawUrl": "https://i.natgeofe.com/n/f0dccaca-174b-48a5-b944-9bcddf913645/01-cat-questions-nationalgeographic_1228126.jpg",
             "accessibilityText": "Example logo"
           }
         ]
