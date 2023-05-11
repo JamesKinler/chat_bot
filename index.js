@@ -47,13 +47,16 @@
 
   function imageCard(agent){
     console.log('image function');
-    const payload = {
+    const payload = 
+    {
       "richContent" : [
-        {
-          "type": "image",
-          "rawUrl": "https://ae01.alicdn.com/kf/H97eb3295e2c0481ca46810c39c350dbaI/New-Women-Underwear-Ice-Silk-Thong-Panties-Sexy-Briefs-Seamless-Thongs-Ladies-Panties-G-String-Tangas.jpg",
-          "accessibilityText": "Example logo"
-        }
+        [
+          {
+            "type": "image",
+            "rawUrl": "https://ae01.alicdn.com/kf/H97eb3295e2c0481ca46810c39c350dbaI/New-Women-Underwear-Ice-Silk-Thong-Panties-Sexy-Briefs-Seamless-Thongs-Ladies-Panties-G-String-Tangas.jpg",
+            "accessibilityText": "Example logo"
+          }
+        ]
       ]
     }
 
