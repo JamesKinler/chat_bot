@@ -2,7 +2,7 @@
   require('dotenv').config()
   // const bodyParser = require('body-parser')
   const {WebhookClient} = require('dialogflow-fulfillment');
-  // const {Card,Suggestion,Image,Payload} = require('dialogflow-fulfillment');
+  const {Card} = require('dialogflow-fulfillment');
   const axios = require('axios');
   const app = express()
   app.use(express.json())
@@ -29,8 +29,6 @@
   }
 
   function weatherApi(agent){
-    console.log('test')
-    agent.add("its cold")
     const weather_city = agent.parameters['geo-city'].toLowerCase();
     console.log(weather_city);
     return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${weather_city}&units=imperial&APPID=${process.env.WEATHER_APP_ID}`)
@@ -47,10 +45,23 @@
     })
   }
 
+  function imageCard(agent){
+    console.log('image function');
+    let json = getCard();
+    let payload = new Payload(
+      'hangouts',
+      json,
+      { rawPayload: true, sendAsMessage: true}
+  );
+
+  agent.add(payload);
+  }
+
 
   let intentMap = new Map();
   intentMap.set("Default Welcome Intent", sayHello)
   intentMap.set("Weather", weatherApi)
+  intentMap.set("image-card", imageCard)
   agent.handleRequest(intentMap)
   
 }
